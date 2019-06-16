@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A command-line CLI to generate .gitignore files
+> A CLI to generate .gitignore files
 
 ![gitignoreit](https://user-images.githubusercontent.com/15229355/59565299-e9c0fb00-9051-11e9-8012-04478bf9268c.gif)
 
