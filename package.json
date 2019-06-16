@@ -1,5 +1,5 @@
 {
-  "name": "gitignore-cli",
+  "name": "gitignore-it",
   "version": "1.0.0",
   "description": "A command-line CLI to generate .gitignore files",
   "main": "index.js",
@@ -31,10 +31,11 @@
     "node": ">=9.3.0"
   },
   "bugs": {
-    "url": "https://github.com/christopherkade/gitignore-cli/issues"
+    "url": "https://github.com/christopherkade/gitignore-it/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christopherkade/gitignore-cli.git"
-  }
+    "url": "git+https://github.com/christopherkade/gitignore-it.git"
+  },
+  "homepage": "https://github.com/christopherkade/gitignore-it"
 }

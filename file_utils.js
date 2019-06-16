@@ -31,7 +31,7 @@ const writeFile = async (file, content) => {
 
 const readFile = async (file) => {
   const asyncReadFile = promisify(fs.readFile)
-  return asyncReadFile(`gitignores/${file}`, { encoding: 'utf-8' })
+  return asyncReadFile(`./gitignores/${file}`, { encoding: 'utf-8' })
     .catch(e => console.error(e))
 }
 

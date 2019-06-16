@@ -1,16 +1,20 @@
-<h1 align="center">Welcome to gitignore-cli 👋</h1>
+<h1 align="center">Welcome to gitignore-it</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > A command-line CLI to generate .gitignore files
 
-### 🏠 [Homepage](https://github.com/christopherkade/gitignore-cli)
+![gitignore-itt2](https://user-images.githubusercontent.com/15229355/59564971-86cd6500-904d-11e9-921a-548060f6d811.gif)
 
 ## Install
 
 ```sh
-yarn
+# Using Yarn
+yarn global add gitignore-it
+
+# Using npm
+npm install -g gitignore-it
 ```
 
 ## Usage
@@ -28,7 +32,7 @@ gitignore
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/christopherkade/gitignore-cli/issues).
+Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/christopherkade/gitignore-it/issues).
 
 ## Show your support
 
