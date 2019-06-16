@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest --coverage",
-    "test:tdd": "jest --watchAll",
-    "lint": "echo \"TODO: add linter\" && exit 1"
+    "lint": "eslint *.js"
   },
   "bin": {
     "gitignore": "./index.js"
@@ -23,6 +21,9 @@
     "prompts": "^2.1.0"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
     "jest": "^24.8.0"
   },
   "engines": {
