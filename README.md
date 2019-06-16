@@ -1,6 +1,9 @@
 <h1 align="center">Welcome to gitignore-it</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/christopherkade/gitignore-it/blob/master/LICENSE">
+    <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green.svg" />  
+  </a>
 </p>
 
 > A command-line CLI to generate .gitignore files
@@ -33,6 +36,8 @@ gitignore
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/christopherkade/gitignore-it/issues).
+
+A quick contribution would be to add a new type of `.gitignore` file. Simply create the appropriate file in the `/gitignores` folder.
 
 ## Show your support
 

@@ -2,6 +2,7 @@ const { promisify } = require('util')
 const fs = require('fs')
 const path = require('path');
 
+// The folder's path containing all of our .gitignore files
 const folderPath = path.join(__dirname, '/gitignores')
 
 /**

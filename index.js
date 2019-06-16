@@ -6,10 +6,13 @@ const {
   getGitignoreNames, getFileType, writeFile, readFile,
 } = require('./file_utils');
 
-const start = async () => {
+(async () => {
+  // Get .gitignore file names
   const gitignores = await getGitignoreNames()
+  // Extract each .gitignore's type
   const gitignoreTypes = getFileType(gitignores)
 
+  // Query the user
   const { file } = await prompts({
     type: 'autocomplete',
     name: 'file',
@@ -22,6 +25,4 @@ const start = async () => {
   const gitignoreContent = await readFile(`${file}.gitignore`)
   // Create the .gitignore file
   await writeFile('.gitignore', gitignoreContent)
-};
-
-start()
+})();
