@@ -1,0 +1,39 @@
+{
+  "name": "gitignore-cli",
+  "version": "1.0.0",
+  "description": "A command-line CLI to generate .gitignore files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --coverage",
+    "test:tdd": "jest --watchAll",
+    "lint": "echo \"TODO: add linter\" && exit 1"
+  },
+  "bin": {
+    "gitignore": "./index.js"
+  },
+  "keywords": [
+    "cli",
+    "gitignore"
+  ],
+  "preferGlobal": true,
+  "author": "Christopher Kade",
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "^2.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "engines": {
+    "npm": ">=5.5.0",
+    "node": ">=9.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/christopherkade/gitignore-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherkade/gitignore-cli.git"
+  }
+}
