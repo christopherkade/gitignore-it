@@ -21,6 +21,11 @@ const {
     limit: 15,
   })
 
+  if (!file) {
+    console.info('👋 No type selected, exiting.')
+    return
+  }
+
   // Get gitignore content based on the answer
   const gitignoreContent = await readFile(`${file}.gitignore`)
   // Create the .gitignore file
