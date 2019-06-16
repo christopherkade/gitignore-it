@@ -3,11 +3,11 @@
 const prompts = require('prompts');
 
 const {
-  getFileNames, getFileType, writeFile, readFile,
+  getGitignoreNames, getFileType, writeFile, readFile,
 } = require('./file_utils');
 
 const start = async () => {
-  const gitignores = await getFileNames('./gitignores')
+  const gitignores = await getGitignoreNames()
   const gitignoreTypes = getFileType(gitignores)
 
   const { file } = await prompts({
