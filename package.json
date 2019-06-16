@@ -1,6 +1,6 @@
 {
   "name": "gitignore-it",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A command-line CLI to generate .gitignore files",
   "main": "index.js",
   "scripts": {

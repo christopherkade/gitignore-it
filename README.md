@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to gitignore-it</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-1.0.4-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/christopherkade/gitignore-it/blob/master/LICENSE">
     <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green.svg" />  
   </a>
