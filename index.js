@@ -13,13 +13,24 @@ const {
   const gitignoreTypes = getFileType(gitignores)
 
   // Query the user
-  const { file } = await prompts({
-    type: 'autocomplete',
-    name: 'file',
-    message: 'What type of .gitignore file do you need?',
-    choices: gitignoreTypes,
-    limit: 15,
-  })
+  const { file } = await prompts(
+    [
+      {
+        type: 'confirm',
+        name: 'confirmation',
+        message: 'Do you want multiples .gitignore files?',
+        initial: false,
+      },
+      {
+        type: prev => (prev === false ? 'autocomplete' : 'multiselect'),
+        name: 'file',
+        message: 'What type of .gitignore file do you need?',
+        choices: gitignoreTypes,
+        min: 1,
+        limit: 15,
+      },
+    ],
+  )
 
   if (!file) {
     console.info('👋 No type selected, exiting.')
@@ -27,7 +38,8 @@ const {
   }
 
   // Get gitignore content based on the answer
-  const gitignoreContent = await readFile(`${file}.gitignore`)
+  const gitignoreContent = await readFile(`${file}`)
+
   // Create the .gitignore file
   await writeFile('.gitignore', gitignoreContent)
 })();

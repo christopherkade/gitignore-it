@@ -24,8 +24,14 @@ const getGitignoreNames = async () => {
  */
 const getFileType = files => files.map(file => ({
   title: file.split('.')[0],
+  value: file.split('.')[0],
 }))
 
+/**
+ * Write the .gitignore file content
+ * @param  {*} file
+ * @param  {*} content
+ */
 const writeFile = async (file, content) => {
   const asyncWriteFile = promisify(fs.writeFile)
   await asyncWriteFile(file, content)
@@ -33,9 +39,20 @@ const writeFile = async (file, content) => {
     .catch(e => console.error(e))
 }
 
-const readFile = async (file) => {
+/**
+ * Read a file content
+ * @param  {*} files
+ */
+const readFile = async (files) => {
   const asyncReadFile = promisify(fs.readFile)
-  return asyncReadFile(`${folderPath}/${file}`, { encoding: 'utf-8' })
+
+  if (files.includes(',')) {
+    const filesToIterate = files.split(',')
+    return Promise.all(filesToIterate.map(file => asyncReadFile(`${folderPath}/${file}.gitignore`, { encoding: 'utf-8' })))
+      .catch(e => console.error(e))
+  }
+
+  return asyncReadFile(`${folderPath}/${files}.gitignore`, { encoding: 'utf-8' })
     .catch(e => console.error(e))
 }
 
