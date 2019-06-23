@@ -18,11 +18,11 @@ const {
       {
         type: 'confirm',
         name: 'confirmation',
-        message: 'Do you want multiples .gitignore files?',
+        message: 'Would you like multiple .gitignore files?',
         initial: false,
       },
       {
-        type: prev => (prev === false ? 'autocomplete' : 'multiselect'),
+        type: prev => (prev === false ? 'autocomplete' : 'autocompleteMultiselect'),
         name: 'file',
         message: 'What type of .gitignore file do you need?',
         choices: gitignoreTypes,
