@@ -49,6 +49,7 @@ const readFile = async (files) => {
   if (files.includes(',')) {
     const filesToIterate = files.split(',')
     return Promise.all(filesToIterate.map(file => asyncReadFile(`${folderPath}/${file}.gitignore`, { encoding: 'utf-8' })))
+      .then(filesContent => filesContent.join(''))
       .catch(e => console.error(e))
   }
 
