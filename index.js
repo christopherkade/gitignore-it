@@ -41,5 +41,5 @@ const {
   const gitignoreContent = await readFile(`${file}`)
 
   // Create the .gitignore file
-  await writeFile('.gitignore', gitignoreContent)
+  await writeFile('.gitignore', gitignoreContent.toString())
 })();
